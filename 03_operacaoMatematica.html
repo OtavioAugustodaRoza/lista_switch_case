@@ -9,11 +9,61 @@
     */
 
     //ENTRADA
-
-
+const valor1 = Number(prompt("digite um número:"));
+const valor2 = Number(prompt("digite um número:"));
+const operacao = prompt("qual operação você quer realizar? 1 = +, 2 = -, 3 = ÷, 4 = x");
+let mensagemid = "";
+let mensagemPi = "";
+let mensagemPn = "";
+let resultadoCal = "";
     //PROCESSAMENTO
 
+switch (valor1 === Number && valor2 === Number) {
+    case true:
+        switch (operacao) {
+            case 1:
+                resultadoCal = valor1 + valor2;
+                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
+                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
+                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";          
+                break;
+            
+            case 2:
+                resultadoCal = valor1 - valor2;
+                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
+                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
+                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
+                break
+
+            case 3:
+                resultadoCal = valor1 / valor2;
+                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
+                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
+                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
+                break 
+
+            case 4:
+                resultadoCal = valor1 * valor2;
+                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
+                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
+                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
+                break
+
+            default:
+                alert("digita os bagulho direito ai!");
+
+
+                
+        }
+        
+    
+        break;
+
+    default:
+        alert("Então parece que você tem problema...você digitou uma letra e eu pedi (digite um número)");
+
+}
     
     //SAÍDA
-
+alert(resultadoCal, mensagemPi, mensagemid, mensagemPn)
 </script>
