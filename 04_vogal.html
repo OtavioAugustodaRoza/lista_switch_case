@@ -6,10 +6,19 @@
     */
 
     // ENTRADA
+const letra = prompt("digite uma letra!").toLowerCase();
 
     
     // PROCESSAMENTO
-
+switch (letra === "a" || letra === "e" || letra === "i" || letra === "o" ) {
+    case true:
+        alert("é uma vogal!");        
+        break;
+        
+    default:
+        alert("não é uma vogal");
+        break;
+}
     
     // SAÍDA
 

@@ -12,10 +12,71 @@
     */
 
     //ENTRADA
-
+const p1 = prompt("Telefonou para a vítima?").toLowerCase();
+const p2 = prompt("Esteve no local do crime?").toLowerCase();
+const p3 = prompt("Mora perto da vítima?").toLowerCase();
+const p4 = prompt("Devia para a vítima").toLowerCase();
+const p5 = prompt("Já trabalhou com a vítima").toLowerCase();
+let pontos = 0;                                                                                                                     
     
     //PROCESSAMENTO
+switch (p1 === "sim") {
+    case true:
+        pontos ++
+        break;
 
+    default:
+        break;
+}
+switch (p2 === "sim") {
+    case true:
+        pontos ++
+        break;
+
+    default:
+        break;
+}
+switch (p3 === "sim") {
+    case true:
+        pontos ++
+        break;
+
+    default:
+        break;
+}
+switch (p4 === "sim") {
+    case true:
+        pontos ++
+        break;
+
+    default:
+        break;
+}
+switch (p5 === "sim") {
+    case true:
+        pontos ++
+        break;
+
+    default:
+        break;
+}
+switch (pontos) {
+    case 2:
+        alert( "Suspeita");
+        
+        break;
+    case 3:
+        alert("Cúmplice");
+        break;
+    case 4:
+        alert( "Cúmplice");
+    case 5:
+        alert("Assassino");
+
+    default:
+        alert("inocente");
+        break;
+}
 
     //SAÍDA
 

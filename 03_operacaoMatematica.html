@@ -9,61 +9,61 @@
     */
 
     //ENTRADA
-const valor1 = Number(prompt("digite um número:"));
-const valor2 = Number(prompt("digite um número:"));
-const operacao = prompt("qual operação você quer realizar? 1 = +, 2 = -, 3 = ÷, 4 = x");
-let mensagemid = "";
-let mensagemPi = "";
-let mensagemPn = "";
-let resultadoCal = "";
-    //PROCESSAMENTO
+    const numero1 = Number(prompt("Digite o primeiro número!"));
+    const numero2 = Number(prompt("Digite o segundo número!"));
+    const operacao = prompt("qual operação você deseja utilizar? Digitar o símbolo exemplo: + ,- ,x ,/");
+    let soma = 0;
+    let parOuImpar = "";
+    let positivoNegativo = "";
+    let inteiroDeci = "";
+    //SAÍDA
+switch (operacao) {
+    case "+":
+        soma = numero1+numero2;
+        break;
+    case "-":
+        soma = numero1-numero2;
+        break;
+    case "x":
+        soma = numero1 * numero2;
+        break;
+    case "/":
+        soma = numero1 / numero2;
+        break;
+    default:
+        soma = 0;
+        break
 
-switch (valor1 === Number && valor2 === Number) {
+}
+
+switch (soma % 2 === 0) {
     case true:
-        switch (operacao) {
-            case 1:
-                resultadoCal = valor1 + valor2;
-                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
-                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
-                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";          
-                break;
-            
-            case 2:
-                resultadoCal = valor1 - valor2;
-                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
-                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
-                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
-                break
+        parOuImpar = "par";
+        break
 
-            case 3:
-                resultadoCal = valor1 / valor2;
-                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
-                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
-                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
-                break 
+    default:
+        parOuImpar = "ímpar";
+        break
 
-            case 4:
-                resultadoCal = valor1 * valor2;
-                mensagemPi = (resultadoCal % 2 === 0) ? "par" : "ìmpar";
-                mensagemPn = (resultadoCal >=  0 ) ? "positivo" : "negativo";
-                mensagemid = (resultadoCal > 0 )  ? "inteiro" : "decimal";      
-                break
-
-            default:
-                alert("digita os bagulho direito ai!");
-
-
-                
-        }
+}
+switch (soma > 0) {
+    case true:
+        positivoNegativo = "positivo";
         
-    
         break;
 
     default:
-        alert("Então parece que você tem problema...você digitou uma letra e eu pedi (digite um número)");
-
+        positivoNegativo = "negativo";
+        break;
 }
-    
-    //SAÍDA
-alert(resultadoCal, mensagemPi, mensagemid, mensagemPn)
+switch (Number.isInteger(soma)) {
+    case true:
+        inteiroDeci = "inteiro";
+        break;
+
+    default:
+        inteiroDeci = "decimal";
+        break;
+}
+alert(`${soma},${parOuImpar},${positivoNegativo} e ${inteiroDeci}`);
 </script>
